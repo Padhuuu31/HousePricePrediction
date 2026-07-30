@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>House Price Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🏠 House Price Prediction</h1>
+
+    <p>
+        Enter Property Details
+    </p>
+
+    <form id="predictionForm">
+
+        <div class="grid">
+
+            <input type="number" id="bedrooms" placeholder="Bedrooms">
+
+            <input type="number" id="bathrooms" placeholder="Bathrooms">
+
+            <input type="number" id="sqft_living" placeholder="Living Area (sqft)">
+
+            <input type="number" id="sqft_lot" placeholder="Lot Area (sqft)">
+
+            <input type="number" id="floors" placeholder="Floors">
+
+            <input type="number" id="waterfront" placeholder="Waterfront (0 or 1)">
+
+            <input type="number" id="view" placeholder="View">
+
+            <input type="number" id="condition" placeholder="Condition">
+
+            <input type="number" id="sqft_above" placeholder="Above Ground Area">
+
+            <input type="number" id="sqft_basement" placeholder="Basement Area">
+
+            <input type="number" id="yr_built" placeholder="Year Built">
+
+            <input type="number" id="yr_renovated" placeholder="Year Renovated">
+
+        </div>
+
+        <button type="submit">
+
+            Predict Price
+
+        </button>
+
+    </form>
+
+   <div id="result"></div>
+
+<div style="text-align:center; margin-top:20px;">
+
+    <button id="downloadBtn" style="display:none;">
+        📄 Download PDF Report
+        <br><br>
+
+<a href="/history">
+
+<button>
+
+📋 View Prediction History
+
+<br><br>
+
+<a href="/dashboard">
+
+<button>
+
+📊 Analytics Dashboard
+
+</button>
+
+</a>
+
+</button>
+
+</a>
+    </button>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
